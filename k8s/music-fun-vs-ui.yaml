@@ -5,13 +5,13 @@ metadata:
   namespace: default
 spec:
   hosts:
-  - "music-fun.kubernetesclustertest.com"
+  - "musicfun.kubernetesclustertest.com"
   gateways:
   - public-gateway.istio-system.svc.cluster.local
   http:
   - route:
     - destination:
-        host: music-fun
+        host: music-fun-ui
         port:
           number: 80
     timeout: 30s

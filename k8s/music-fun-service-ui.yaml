@@ -2,13 +2,13 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: demo
-  name: demo-backend
+    app: music-fun
+  name: music-fun-ui
 spec:
   ports:
-  - name: 80-80
+  - name: http-80
     port: 80
     protocol: TCP
-    targetPort: 8080
+    targetPort: 80
   selector:
-    app: demo
+    app: ui
