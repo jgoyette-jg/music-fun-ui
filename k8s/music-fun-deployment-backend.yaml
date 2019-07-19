@@ -1,0 +1,21 @@
+kind: Deployment
+apiVersion: extensions/v1beta1
+metadata:
+  name: music-fun-ui
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: ui
+      labels:
+        app: music-fun
+      annotations:
+        readiness.status.sidecar.istio.io/applicationPorts: ""
+    spec:
+      containers:
+      - name: ui
+        image: gcr.io/coastal-pointer-246119/music-fun-ui
+        imagePullPolicy: Always
+        ports:
+        - name: ui
+          containerPort: 80
