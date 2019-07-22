@@ -4,7 +4,10 @@ exports.config = {
   helpers: {
     Puppeteer: {
       url: 'http://localhost:3000',
-      show: false
+      show: false,
+      chrome: {
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
+      }
     }
   },
   include: {
