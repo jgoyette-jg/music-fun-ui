@@ -2,19 +2,12 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-            }
-        }
         stage('Test') {
             steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+                withDockerContainer("node:alpine") {
+                    sh "npm install"
+                    sh "npm run uiTests"
+                }
             }
         }
     }
