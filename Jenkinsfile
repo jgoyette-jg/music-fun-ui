@@ -13,7 +13,7 @@ pipeline {
   stages { 
       stage('Test') {
             steps {
-                container("node-ui-testss") {
+                container("node-ui-tests") {
                     sh "npm install"
                     sh "npm run uiTests"
                 }
