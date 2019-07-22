@@ -4,7 +4,7 @@ pipeline {
       //cloud 'kubernetes'
       containerTemplate {
         name 'node-ui-tests'
-        image 'node:alpine'
+        image 'buildkite/puppeteer'
         ttyEnabled true
         command 'cat'
       }
