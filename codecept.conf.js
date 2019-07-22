@@ -3,7 +3,7 @@ exports.config = {
   output: './output',
   helpers: {
     Puppeteer: {
-      url: 'http://localhost:3000',
+      url: 'http://musicfun.kubernetesclustertest.com',
       show: false,
       chrome: {
         args: ['--no-sandbox', '--disable-setuid-sandbox']
