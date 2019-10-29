@@ -4,7 +4,7 @@ metadata:
   labels:
     app: music-fun
   name: music-fun-ui
-namespace: music-fun
+  namespace: music-fun
 spec:
   ports:
   - name: http-80
