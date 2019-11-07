@@ -1,7 +1,7 @@
 steps:
   # Install
-  - name: 'buildkite/puppetee'
+  - name: 'buildkite/puppeteer'
     args: ['npm','install']
   # Build
-  - name: 'buildkite/puppetee'
+  - name: 'buildkite/puppeteer'
     args: ['npm','run','uiTests']
