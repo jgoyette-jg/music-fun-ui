@@ -1,7 +1,7 @@
 steps:
   # Install
-  - name: 'gcr.io/cloud-builders/npm'
-    args: ['install']
+  - name: 'buildkite/puppetee'
+    args: ['npm','install']
   # Build
-  - name: 'gcr.io/cloud-builders/npm'
-    args: ['run', 'uiTests']
+  - name: 'buildkite/puppetee'
+    args: ['npm','run','uiTests']
